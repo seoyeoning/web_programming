@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>실습과제4-2</title>
+    <meta charset="utf-8" />
+    <script>
+      window.onload = function () {
+        function getNextShowing(movie) {
+          var now = new Date().getTime();
+          for (var i = 0; i < movie.showtimes.length; i++) {
+            var showtime = getTimeFromString(movie.showtimes[i]);
+            if (showtime - now > 0) {
+              return (
+                '박서연_2020710026' +
+                'Next showing of ' +
+                movie.title +
+                ' is ' +
+                movie.showtimes[i]
+              );
+            }
+          }
+          return null;
+        }
+
+        function getTimeFromString(str) {
+          var theTime = new Date();
+          var time = str.match(/(\d+)(?::(\d\d))?\s*(p?)/);
+          theTime.setHours(parseInt(time[1]) + (time[3] ? 12 : 0));
+          theTime.setMinutes(parseInt(time[2]) || 0);
+          return theTime.getTime();
+        }
+
+        var myMovie = {
+          title: 'about time',
+          genre: 'romance',
+          rating: 5,
+          showtimes: ['1:00pm', '7:00pm'],
+        };
+
+        var nextShowing = getNextShowing(myMovie);
+        alert(nextShowing);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
