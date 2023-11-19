@@ -1,0 +1,28 @@
+body {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+div.dataItem {
+  font-family: Verdana, Helvetica, sans-serif;
+  color: #434343;
+  padding: 10px;
+}
+
+div.dataItem:nth-child(2n) {
+  background-color: #fafafa;
+}
+
+div.dataItem:first-child {
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+div.dataItem:last-child {
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="subway.css" />
+    <title>지하철 호선별 승하차인원</title>
+  </head>
+  <body>
+    <h1>지하철 호선별 승하차인원</h1>
+    <h2>박서연_2020710026</h2>
+    <form id="subwayForm">
+      <label for="date">날짜:</label>
+      <input type="date" id="date" name="date" />
+      <label for="line">호선:</label>
+      <select id="line" name="line">
+        <option value="1호선">1호선</option>
+        <option value="2호선">2호선</option>
+        <option value="3호선">3호선</option>
+        <option value="4호선">4호선</option>
+        <option value="5호선">5호선</option>
+        <option value="6호선">6호선</option>
+        <option value="7호선">7호선</option>
+        <option value="8호선">8호선</option>
+        <option value="9호선">9호선</option>
+      </select>
+      <button type="submit">호선별 승하차인원 조회</button>
+    </form>
+
+    <div id="subway"></div>
+
+    <script src="subway.js"></script>
+  </body>
+</html>
